@@ -17,7 +17,7 @@ resource "oci_core_instance" "vm" {
   }
 
   metadata = {
-    ssh_authorized_keys = file(var.oci_ssh_keys) 
+    ssh_authorized_keys = file(var.oci_ssh_public_key) 
   } 
 
 }
