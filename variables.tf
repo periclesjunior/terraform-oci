@@ -34,7 +34,14 @@ variable "oci_inst_src_id" {
   description = "OCI instance source id"
 }
 
-variable "oci_ssh_keys" {
-  description = "OCI ssh key file path"
+variable "oci_ssh_public_key" {
+  description = "OCI ssh public key file path"
 }
 
+variable "oci_vcn_cidr_block" {
+  description = "OCI VCN CIDR block"
+}
+
+variable "oci_vcn_dns_label" {
+  description = "OCI VCN DNS label"
+}
