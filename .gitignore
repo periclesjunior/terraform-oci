@@ -3,4 +3,5 @@
 *.backup
 id_rsa*
 *.iso
+*.swp
 credentials
