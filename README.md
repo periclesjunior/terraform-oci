@@ -11,6 +11,11 @@ on linux_amd64
 + provider registry.terraform.io/hashicorp/oci v4.60.0
 ```
 
+```bash
+$ oci --version 
+3.4.3
+```
+
 # References Links
 https://github.com/oracle/oci-cli 
 
