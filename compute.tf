@@ -1,9 +1,7 @@
 data "oci_core_images" "image" {
   compartment_id           = var.oci_compartment_id
   shape                    = var.oci_inst_shape
-#  operating_system         = "Canonical Ubuntu"
   operating_system         = var.oci_shape_os
-#  operating_system_version = "20.04"
   operating_system_version = var.oci_shape_os_version
 }
 
