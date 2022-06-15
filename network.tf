@@ -31,9 +31,9 @@ resource "oci_core_subnet" "subnet" {
   vcn_id              = oci_core_vcn.vcn.id
   cidr_block          = cidrsubnet(var.oci_vcn_cidr_block, 8, 1)
   display_name        = "subnet"
-  dns_label           = "subnet"
-  route_table_id      = oci_core_route_table.PublicRT.id
-  security_list_ids   = [oci_core_security_list.securitylist.id]
+  dns_label           = var.oci_vcn_dns_label
+  route_table_id      = oci_core_route_table.public_rt.id
+  security_list_ids   = [oci_core_security_list.security_list.id]
 }
 
 resource "oci_core_security_list" "security_list" {
