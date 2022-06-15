@@ -1,3 +1,12 @@
+data "oci_core_images" "image" {
+  compartment_id           = var.oci_compartment_id
+  shape                    = var.oci_inst_shape
+#  operating_system         = "Canonical Ubuntu"
+  operating_system         = var.oci_shape_os
+#  operating_system_version = "20.04"
+  operating_system_version = var.oci_shape_os_version
+}
+
 resource "oci_core_instance" "vm" {
   availability_domain = var.oci_ad
   compartment_id = var.oci_compartment_id
@@ -5,9 +14,14 @@ resource "oci_core_instance" "vm" {
   shape = var.oci_inst_shape
   preserve_boot_volume = false
 
+  shape_config {
+    memory_in_gbs = "6"
+    ocpus         = "1"
+  }
+
   source_details {
     source_type = var.oci_inst_src_type
-    source_id = var.oci_inst_src_id
+    source_id = data.oci_core_images.image.images[0].id
   }
 
   create_vnic_details {
