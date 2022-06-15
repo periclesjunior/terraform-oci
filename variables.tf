@@ -30,8 +30,12 @@ variable "oci_inst_src_type" {
   description = "OCI instance type"
 }
 
-variable "oci_inst_src_id" {
-  description = "OCI instance source id"
+variable "oci_shape_os" {
+  description = "Operating System Shape"
+}
+
+variable "oci_shape_os_version" {
+  description = "Operating System Version Shape"
 }
 
 variable "oci_ssh_public_key" {
