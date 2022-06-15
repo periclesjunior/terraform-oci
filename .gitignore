@@ -5,3 +5,4 @@ id_rsa*
 *.iso
 *.swp
 credentials
+terraform.tfvars
