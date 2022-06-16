@@ -25,7 +25,6 @@ resource "oci_core_instance" "vm" {
 
   create_vnic_details {
     assign_public_ip = true
-    display_name = var.oci_inst_name
     subnet_id = oci_core_subnet.subnet.id
   }
 
