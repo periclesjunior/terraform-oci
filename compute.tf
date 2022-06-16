@@ -6,9 +6,10 @@ data "oci_core_images" "image" {
 }
 
 resource "oci_core_instance" "vm" {
+  count = var.oci_inst_count
+  display_name = "vm-00${count.index + 1}"
   availability_domain = var.oci_ad
   compartment_id = var.oci_compartment_id
-  display_name = var.oci_inst_name
   shape = var.oci_inst_shape
   preserve_boot_volume = false
 
