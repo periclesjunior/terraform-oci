@@ -2,7 +2,7 @@ resource "oci_core_vcn" "vcn" {
   compartment_id = var.oci_compartment_id
   cidr_block     = var.oci_vcn_cidr_block
   dns_label      = var.oci_vcn_dns_label
-  display_name   = "subnet"
+  display_name   = "vcn"
 }
 
 # Internet Gateway
