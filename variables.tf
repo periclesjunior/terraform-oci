@@ -18,8 +18,8 @@ variable "oci_compartment_id" {
   description = "OCI compartment id"
 }
 
-variable "oci_inst_name" {
-  description = "OCI instance name"
+variable "oci_inst_count" {
+  description = "OCI instance count"
 }
 
 variable "oci_inst_shape" {
